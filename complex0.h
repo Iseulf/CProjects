@@ -1,3 +1,4 @@
+/*这是一个复数类的实现*/
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -9,6 +10,7 @@ private:
 
 public:
     complex(double real, double imga);
+    complex();
     ~complex();
     complex operator+(const complex &foobar) const;
     complex operator-(const complex &foobar) const;
@@ -25,6 +27,11 @@ complex::complex(double real, double imga)
 {
     _real = real;
     _imga = imga;
+}
+
+complex::complex(){
+    _real=0;
+    _imga=0;
 }
 
 complex::~complex()
